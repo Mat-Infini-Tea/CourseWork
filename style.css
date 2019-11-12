@@ -76,7 +76,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 28px 28px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -86,5 +86,6 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  background-color: 00FF8F;
 }
 
