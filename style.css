@@ -38,7 +38,8 @@ li a {
 
 li a:hover {
         color: black;
-        background-color: #00FF8F;
+        background-color: #00ffaa;
+        
 }
 
 h1{
@@ -50,7 +51,7 @@ h1{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 5%;
   background-color: black;
 }
 
@@ -61,6 +62,41 @@ h1{
   text-decoration: none;
 }
 
-/* Change the link color on hover */
+.footer{
+        background-color: black;
+        color: white;
+        width: 100%;
+        position: static;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        margin: 0;
+        background-size: cover;
+}   
+
+.btn-group button {
+        background-color: black; /* Green background */
+        border: 0px solid green; /* Green border */
+        color: white; /* White text */
+        padding: 30px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        width: 80%; /* Set a width if needed */
+        display: block; /* Make the buttons appear below each other */
+        margin-right: 10%; 
+        margin-left: 10%;
+        font-weight: bold;
+        font-size: 50px;
+        font-family: Brush Script MT, cursive;
+      }
+      
+.btn-group button:not(:last-child) {
+        border-bottom: none; /* Prevent double borders */
+}
+      
+      /* Add a background color on hover */
+.btn-group button:hover {
+        background-color: #3e8e41;
+
+}
 
 
