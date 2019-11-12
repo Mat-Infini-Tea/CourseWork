@@ -70,7 +70,7 @@ a:hover, .dropdown:hover .dropbtn {
 .dropdown-content {
   display: none;
   position: fixed;
-  background-color: red;
+  background-color: 00FF8F;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: ;
@@ -86,7 +86,7 @@ a:hover, .dropdown:hover .dropbtn {
 
 
 
-.dropdown:hover .dropdown-content {
+.dropdown-content:hover {
   display: block;
   background-color: 00FF8F;
 }
