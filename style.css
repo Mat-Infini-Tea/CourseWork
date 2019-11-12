@@ -86,7 +86,7 @@ a:hover, .dropdown:hover .dropbtn {
 
 
 
-.dropdown-content:hover {
+.dropdown:hover .dropdown-content:hover {
   display: block;
   background-color: 00FF8F;
 }
