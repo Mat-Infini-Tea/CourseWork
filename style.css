@@ -49,8 +49,20 @@ li a:hover, .dropdown:hover .dropbtn {
   background-color: 00FF8F;
 }
 
-li.dropdown {
-  display: inline-block;
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
 .dropdown-content {
@@ -70,7 +82,9 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+          background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
