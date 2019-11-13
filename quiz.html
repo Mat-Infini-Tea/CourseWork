@@ -18,6 +18,139 @@
 <script type="text/javascript" src="PosterGuess.js"></script>
 <link rel="stylesheet" type="text/css" href="PosterGuess.css">
 
+  <style>
+  #posterOne, #posterTwo, #posterThree{
+    height: 2%;
+    width: 27%;
+    margin-left: 20px;
+}
+
+#Poster{
+    background-color: darkgray;
+    border-style: solid;
+    width: 500px;
+    height: 500px
+    
+}
+
+
+#posterImage{
+    margin: 35px;
+    position: static;
+}
+
+#posterStart{
+    margin: 10px;
+    margin-left: 185px;
+}
+
+#posterScore{
+    text-align: center;
+    border-style: solid;
+    margin: 3px;
+    width: 80px;
+    height: 40px;
+    float: right;
+    margin-top: -12%;
+}
+
+#posterAttemptDisplay{
+    text-align: center;
+    border-style: solid;
+    margin: 1%;
+    width: 80px;
+    height: 40px;
+    float: left;
+    margin-top: -12%;
+
+}
+
+#posterLastCorrect{
+    margin-left: 25%;
+    float: center;
+    border-style: solid;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+#posterTop{
+    display: block; 
+}
+    
+    
+    #quizOne, #quizTwo, #quizThree, #quizFour{
+    height: 20px;
+    width: 300px;
+    margin: 16px;
+    margin-left: 40px;
+}
+
+#Quiz{
+    
+    background-image: url("Images/QuizBackground.PNG");
+    border-style: solid;
+    height: 503px;
+    width: 400px;
+}
+
+#quizScore{
+    text-align: center;
+    border-style: solid;
+    margin: 3px;
+    width: 80px;
+    height: 40px;
+    float: right;
+}
+
+#quizAttemptDisplay{
+    text-align: center;
+    border-style: solid;
+    margin: 3px;
+    width: 120px;
+    height: 40px;
+    float: left;
+
+}
+
+#quizlastCorrect{
+    margin-left: 135px;
+    float: center;
+    border-style: solid;
+    width: 160px;
+    height: 60px;
+    text-align: center;
+}
+
+#quizTop{
+    color: silver;
+    display: block; 
+   
+}
+
+#quizStart{
+    margin: 10px;
+    margin-left: 163px;
+}
+
+#quizQuestion{
+    color: white;
+    border-style: solid;
+    margin: 10px;
+    margin-left: 35px;
+    height: 20px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 30%;
+    background-color: black
+}
+body{
+    background-color: aqua;
+}
+    
+  </style>
+
 </head>
 
 <body>
@@ -35,7 +168,7 @@
         <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Quiz
       </h2>
       
-      <div id = "Quiz" style = "font-size: 18px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 3%;">
+      <div id = "Quiz" style = "font-size: 18px; color: black; margin-top: 10%; margin-right: 10%; margin-left: 3%;">
                 <div id = "quizTop">
                     <p id = "quizAttemptDisplay">attempt : 0</p>
                     <p id="quizScore">Score : 0</p>
@@ -54,7 +187,7 @@
             </div>
         
             
-            <div id = "Poster" style="font-size: 14px;margin-top: -43%; color: black; margin-right: 10%; margin-left: 50%; ">
+            <div id = "Poster" style="font-size: 14px;margin-top: 10%; color: black; margin-right: 10%; margin-left: 50%; ">
                 <div id = "posterTop">
                     <p id = "posterAttemptDisplay">attempt : 0</p>
                     <p id="posterScore">Score : 0</p>
@@ -72,9 +205,6 @@
                 <p style="font-size: 18px;">2nd: Kester</p>
                 <p style="font-size: 18px;">3rd: Ryan</p>
             </div>
-
-      <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">
-      </p>
 
       
 
