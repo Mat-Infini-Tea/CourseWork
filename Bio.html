@@ -1,42 +1,112 @@
-<!doctype html>
-
-<html lang="en">
-<head>
+<html>
+    <title>Church Of Nicholas Cage</title>
   
+    <style>
+    img{
+        float:right;
+        border: 10px solid black;
 
-  <title>Biography</title>
+    }
+    button{
+        padding: 5% 5%;
+        margin-right: auto; margin-left: auto;
+
+    }
+        * {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 650px; 
+}
+.columnbutton {
+  float: left;
+  width: 20%;
+  padding: 10px;
+
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
   
-  <link rel="shortcut icon" href="ncsl1.png" />
+}
+    
+    
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
-<body>
-    <ul>
-        <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
-    </ul> 
-    <ul class="sul" style="margin-top: 3.95%;">
-    <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/quiz.html">Quiz</a></li>
-    <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/films.html">Films</a></li>
-  </ul>
-    <div style="float: middle; font-size: 9px; color: white; padding: 50% 0% 0% 0%; margin-right: 10%; margin-left: 10%; margin-top: 10%; background-color: white; word-wrap: break-word;">
-        <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Membership Area
-      </h2>
-
-      <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">The Biography Text will go here.
-      </p>
-
+    <body>
+      <ul>
+          <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
+          <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
+          <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
+          <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
+      </ul> 
+      <ul class="sul" style="margin-top: 3.95%;">
+      <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/quiz.html">Quiz</a></li>
+      <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/films.html">Films</a></li>
+    </ul>
       
+    <h1 style="text-align: left; font-size: 90px; color: white; padding: 20% 5%;">Biography <br>of Nicolas Cage </h1>   
+    <br>
+    <br>
+    <br>
+    
+    <div class = "row" style = "float: middle; font-size: 9px;  margin-right: 10%; margin-left: 10%; background-color:grey" >
+      <div class="columnbutton" style="background-color:black" >
+     
+      <button type = "button" onclick='document.getElementById("overview").innerHTML = "Overview Test"'>Overview</button>
+    </div>
+    <div class="columnbutton" style="background-color:black">
+      <button type = "button" onclick='document.getElementById("overview").innerHTML = "Early Test"' >Early Life</button>
 
+    </div>
+    <div class="columnbutton" style="background-color:black">
+    
+    <button type = "button" onclick='document.getElementById("overview").innerHTML = "Career Test"' >Career</button>
   </div>
-  <div class="footer">
-    <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
+    <div class="columnbutton" style="background-color:black">
+    <button type = "button" onclick='document.getElementById("overview").innerHTML = "Personal Test"' >Personal Life</button>
   </div>
+    <div class="columnbutton" style="background-color:black">
+    
+    <button type = "button" onclick='document.getElementById("overview").innerHTML = "Accomplishments Test"' >Accomplishments</button>
+  </div>
+    </div>
+
+
+
+    <div class="row" style="float: middle; font-size: 9px; color: white; padding: 0% 10% 0% 0%; margin-right: 10%; margin-left: 10%; background-color: white;">
+      <br>
+      <br>
+      <br>
+      <br>
+        <div class="column" style="background-color:white">
+          <h2>Biography</h2>
+          <p id = overview style = color:black>Overview Test</p>
+        </div>
+        <div class="column" style="background-color:white;">
+          
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_%28Mostra%29.jpg" alt="Nicolas Cage Profile Picture" style="width:400px;height:500px; float: right ; margin-left: 10%; ">
+
+        </div>
+      </div>
+        
+        
+            
+      <div class="footer">
+        <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
+      </div>
+
     </div>                                                                                    
 </body>
 </html>
