@@ -18,7 +18,7 @@
   display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 0px 20px;
 }
 
 
@@ -78,12 +78,7 @@ label {
 }
 
 .btn:hover {
-  background-color: #00ffaa;
-}
-
-span.price {
-  float: right;
-  color: #00ffaa;
+  background-color: #00a76f;
 }
 
 @media (max-width: 800px) {
@@ -118,7 +113,7 @@ span.price {
       <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">
       </p>
 
-      <h3 style="font-size: 50px; color: black; margin-top: 10%; margin-right: 10%; margin-left: 10%; text-align: center; font-family: Brush Script MT, cursive; font-weight: bold;">
+      <h3 style="font-size: 50px; color: black; margin-top: 5%; margin-right: 10%; margin-left: 10%; text-align: center; font-family: Brush Script MT, cursive; font-weight: bold;">
         Membership Tiers (Click on tier to see details)
         </h3>
 
@@ -132,37 +127,28 @@ span.price {
         <button onclick="bronzeF()"  id="myButton5" style = "background-color:#cd7f32">Bronze Membership</button>
         <button onclick="peasantF()"  id="myButton6" style = "background-color:rgb(48, 39, 0)">Peasant Membership</button>
       </div> 
-      <div style = "color: black; font-size: 30px; margin-right: 10%; margin-left: 10%; margin-top: 10%;"> 
-        <form>
-          <select>
-            <option value="Diamond"> Diamond<br>
-            <option value="Platinum">Platinum<br>
-            <option value="Gold"> Gold <br>
-            <option value="Silver"> Silver <br>
-            <option value="Bronze"> Bronze <br>
-            <option value="Peasant"> Peasant
-          </select>
-        </form> 
-      </div>
+      
 
       <h2 style="font-size: 60px; color: black; margin-top: ; margin-right: 10%; margin-left: 10%">Checkout Area:
         </h2>
 
-      <div class="row" style="background-width = 80%">
-          <form>
-              <select>
-                <option value="Diamond"> Diamond<br>
-                <option value="Platinum">Platinum<br>
-                <option value="Gold"> Gold <br>
-                <option value="Silver"> Silver <br>
-                <option value="Bronze"> Bronze <br>
-                <option value="Peasant"> Peasant
-              </select>
-            </form> 
+      <div class="row">
+          
         
         <div class="col-75">
           <div class="container">
             <form action="/action_page.php">
+
+              
+              <select class="col-50" style = "font-size: 24px; color: white; background-color: #000000;">
+                <option value="Diamond" style= "background-color: rgb(0, 191, 255);"> Diamond<br>
+                <option value="Platinum" style= "background-color: rgb(98, 137, 180)">Platinum<br>
+                <option value="Gold" style= "background-color: #d4af37"> Gold <br>
+                <option value="Silver" style= "background-color: rgb(179, 179, 179)"> Silver <br>
+                <option value="Bronze" style= "background-color: #cd7f32"> Bronze <br>
+                <option value="Peasant" style= "background-color: rgb(48, 39, 0)"> Peasant
+              </select>
+              
       
               <div class="row">
                 <div class="col-50">
@@ -204,7 +190,7 @@ span.price {
                     </div>
                     <div class="col-50">
                       <label for="cvv">CVV</label>
-                      <input type="text" id="cvv" name="cvv" placeholder="Those Wacky Digits on The Back">
+                      <input type="text" id="cvv" name="cvv" placeholder="Those Three Wacky Digits on The Back">
                     </div>
                   </div>
                 </div>
