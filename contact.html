@@ -1,47 +1,94 @@
 <!doctype html>
-
+<!-- Page by euan chree of the Nicholas Cage Society-->
 <html lang="en">
+  <head>
+    <!-- Setting up the tabs title and linking to external files-->
+    <title>Contact</title>
+    <link rel="shortcut icon" href="ncsl1.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-<head>
+    <!-- The css for the page (seperate from the style.css that every page gets) -->
+    <style>
+      /* Css for the form elements */
+      form {
+        margin-left: 10%;
+        display: block;
+        color: black;
+        font-size: 20px;
+      }
 
+      /* Css for the status box that displays to the user wether they have up loaded a question*/
+      #statusBox {
+        background-color: orange;
+        color: black;
+        font-size: 20px;
+        margin: 10px;
+      }
+    </style>
 
-  <title>Contact</title>
-
-  <link rel="shortcut icon" href="ncsl1.png" />
-
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
-<body>
-  <ul>
-    <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
-    <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
-  </ul>
-  <ul class="sul">
-    <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/rules.html">Rules</a></li>
-    <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/contact.html">Contact</a></li>
-    <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/Events.html">Events</a></li>
-  </ul>
+    <!-- The javascript code for the page -->
+    <script>
+      //Creating a function that updates the status box element
+      function collectInfo(statusBox) { //Passing the function the statusBox id
+        var email = document.getElementById("emailInput").value; //Sets a variable email to the data inputted to the form
+        var question = document.getElementById("questionInput").value; //Sets a variable question to the data inputted to the form
+        var statusBox = document.getElementById(statusBox); //Sets the statusBox variable to "getElementById" and is given statusBox (the variable that was passed to the function)
+        statusBox.innerHTML = "Status: question has been submitted. Thank you "+email+" for asking "+question+"."; //Changes the inner html of the status box, it tells the user wether a question has been uploaded. It also displays the email that was inputted and what they asked
+        statusBox.style.backgroundColor="LightGreen"; //Changes the background colour of the stausBox to easily show a upload
+      };
+    </script>
+  </head>
   
-    <div
-    style="float: middle; font-size: 9px; color: white; padding: 50% 0% 0% 0%; margin-right: 10%; margin-left: 10%; margin-top: 10%; background-color: white; word-wrap: break-word;">
-    
-      <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Contact Page
-      </h2>
+  <body>
+    <!-- Html code for the horizontal nav bar-->
+    <ul>
+      <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
+      <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
+      <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
+      <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
+    </ul>
 
-      <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">Euans page
-      </p>
+    <!-- Html code for the vertical nav bar-->
+    <ul class="sul" style="margin-top: 3.95%;">
+      <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/rules.html">Rules</a></li>
+      <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/contact.html">Contact</a></li>
+      <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/Events.html">Events</a></li>
+    </ul>
 
+    <!-- Html code for the white box that the pages info is displayed uppon -->
+    <div style="float: middle; font-size: 9px; color: white; padding: 50% 0% 0% 0%; margin-right: 10%; margin-left: 10%; margin-top: 10%; background-color: white; word-wrap: break-word;">
       
+      <!-- Displaying some text that guide the user to inputting a question if they need to -->
+      <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Contact Page</h2>
+      <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">If you have any questions that our other pages haven't answered you can ask them here! Just fill out the form below and we'll get back to you within 48 hours.</p>
+      <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">Contact form</p>
 
-  </div>
-  <div class="footer">
-    <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
-  </div>
-</body>
+      <!-- Html code for the form inputs on the page-->
+      <div class="contactForm">
+        <form>
 
+          <!-- The email input -->
+          <p>Email Address<br></p>
+          <input type="text" id="emailInput" required>
+
+          <!-- The question input -->
+          <p>Your question<br></p>
+          <textarea rows="10" cols="75" id="questionInput" required>Ask your question here.</textarea>
+          <br>
+
+          <!-- The button they press to upload the question -->
+          <button type="button" onclick="collectInfo('statusBox')">Upload</button>
+        </form>
+
+        <!-- Html code for the status box that displays information about the inputted info -->
+        <p id="statusBox">Status: no question has been submitted.</p>
+      </div>
+
+    </div>
+
+    <!-- Html code for the footer-->
+    <div class="footer">
+      <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
+    </div>
+  </body>
 </html>
