@@ -12,6 +12,88 @@
 
   <link rel="stylesheet" type="text/css" href="style.css">
 
+  <style>
+      .row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 20px 0 20px;
+}
+
+
+
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #00ffaa;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #00ffaa;
+}
+
+span.price {
+  float: right;
+  color: #00ffaa;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
+
+  </style>
+
 </head>
 
 <body>
@@ -36,27 +118,134 @@
       <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">
       </p>
 
+      <h3 style="font-size: 50px; color: black; margin-top: 10%; margin-right: 10%; margin-left: 10%; text-align: center; font-family: Brush Script MT, cursive; font-weight: bold;">
+        Membership Tiers (Click on tier to see details)
+        </h3>
+
+
+
       <div class="btn-group">
-        <button style = "background-color:rgb(0, 191, 255)" class="diamond">Diamond Membership</button>
-        <button style = "background-color:rgb(98, 137, 180)">Platinum Membership</button>
-        <button style = "background-color:#d4af37">Gold Membership</button>
-        <button style = "background-color:rgb(179, 179, 179)">Silver Membership</button>
-        <button style = "background-color:#cd7f32">Bronze Membership</button>
-        <button style = "background-color:rgb(48, 39, 0)">Peasant Membership</button>
+        <button  onclick="diamondF()"  id="myButton1" style = "background-color:rgb(0, 191, 255)" class="diamond">Diamond Membership</button>
+        <button onclick="platinumF()"  id="myButton2" style = "background-color:rgb(98, 137, 180)">Platinum Membership</button>
+        <button onclick="goldF()"  id="myButton3" style = "background-color:#d4af37">Gold Membership</button>
+        <button onclick="silverF()"  id="myButton4" style = "background-color:rgb(179, 179, 179)">Silver Membership</button>
+        <button onclick="bronzeF()"  id="myButton5" style = "background-color:#cd7f32">Bronze Membership</button>
+        <button onclick="peasantF()"  id="myButton6" style = "background-color:rgb(48, 39, 0)">Peasant Membership</button>
       </div> 
+      <div style = "color: black; font-size: 30px; margin-right: 10%; margin-left: 10%; margin-top: 10%;"> 
+        <form>
+          <select>
+            <option value="Diamond"> Diamond<br>
+            <option value="Platinum">Platinum<br>
+            <option value="Gold"> Gold <br>
+            <option value="Silver"> Silver <br>
+            <option value="Bronze"> Bronze <br>
+            <option value="Peasant"> Peasant
+          </select>
+        </form> 
+      </div>
+
+      <h2 style="font-size: 60px; color: black; margin-top: ; margin-right: 10%; margin-left: 10%">Checkout Area:
+        </h2>
+
+      <div class="row" style="background-width = 80%">
+          <form>
+              <select>
+                <option value="Diamond"> Diamond<br>
+                <option value="Platinum">Platinum<br>
+                <option value="Gold"> Gold <br>
+                <option value="Silver"> Silver <br>
+                <option value="Bronze"> Bronze <br>
+                <option value="Peasant"> Peasant
+              </select>
+            </form> 
+        
+        <div class="col-75">
+          <div class="container">
+            <form action="/action_page.php">
+      
+              <div class="row">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Full Name">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="E-Mail">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="Street">
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="City">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="County">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="Post Code">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="Type Of Card">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="Credit Card Number">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="Expiry Month">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="Expiry Year">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="Those Wacky Digits on The Back">
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+              <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+          </div>
+        </div>
+      
+      </div> 
+
 
   </div>
   <div class="footer">
     <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
   </div>
   <script>
-    $(document).ready(function() {
-      $('.diamond').hover(function() {
-        $(this).html('This is test text');
-      }, function() {
-        $(this).html('Talk to a rep');
-      });
-    });
+    function diamondF(){
+      document.getElementById("myButton1").innerHTML = "Best Value, £99,999 per Month, access to whiskey cabinet.";; 
+    }
+
+    function platinumF(){
+      document.getElementById("myButton2").innerHTML = "Great Value, £9,999 per Month, access to platinum lounge in country house.";; 
+    }
+
+    function goldF(){
+      document.getElementById("myButton3").innerHTML = "Considerable Value, £6,999 per Month, access to wine cellar.";; 
+    }
+
+    function silverF(){
+      document.getElementById("myButton4").innerHTML = "Mid Value, £2,999 per Month, access to completley legally obtained family films of Nicholas Cage";; 
+    }
+
+    function bronzeF(){
+      document.getElementById("myButton5").innerHTML = "Very Low Value, £1,999 per Month, access to vast archive of never before seen photos of Nicholas Cage.";; 
+    }
+
+    function peasantF(){
+      document.getElementById("myButton6").innerHTML = "No Value, £99 per Month, will have the honour of being used as foot stool and table by other members.";; 
+    }
   </script>
 </body>
 
