@@ -1,4 +1,6 @@
-var posterImgDir = ["Images/One.jpg","Images/Two.jpg","Images/Three.jpg","Images/Four.jpg"] // list of img directories 
+//Kaveh Nejad 1905933
+// JS for Poster Quess of Games Page(titled "quiz")
+var posterImgDir = ["Images/One.jpg","Images/Two.jpg","Images/Three.jpg","Images/Four.jpg"] // list of img directories named with numbers to avoid cheating
 var posterCorrentSrc = "";
 var posterNewSrc = "";
 var posterCorrectButton = "";
@@ -14,25 +16,25 @@ var posterMovieNames = {
     "Images/Four.jpg" : "Lord Of War"
 }
 
-var posterButtonIDs = ["posterOne","posterTwo","posterThree"];
+var posterButtonIDs = ["posterOne","posterTwo","posterThree"];//html IDs
 
 
-function posterMain() {
+function posterMain() { // Main function
     posterUpdateImage();
     posterUpdateTextBoxValues();
     posterUpdateButtons();
 
 }
 
-function posterButtonQuessCheck(inputNum){
-    posterCorrectButton === inputNum? posterScore++ : posterScore--;
+function posterButtonQuessCheck(inputNum){ // the answer Buttons call this function
+    posterCorrectButton === inputNum? posterScore++ : posterScore--;//checks the answer
     document.getElementById("posterLastCorrect").innerHTML = "Last correct : " + posterMovieNames[posterNewSrc]; // update lastcoorect text box
-    posterMain();
+    posterMain();//restarts the process
 
 }
 
 
-function posterUpdateImage(){
+function posterUpdateImage(){// gets and sets a new image
     posterCorrentSrc = document.getElementById('posterImage').src;  //get corrent src
 
     var posterImage = document.getElementById('posterImage');
@@ -46,7 +48,7 @@ function posterUpdateImage(){
 }
 
 
-function posterUpdateButtons(){
+function posterUpdateButtons(){//upadets all buttons with the correct and incorect answers
     posterCorrectButton = Math.ceil(Math.random() * 3); // assigns random button
     document.getElementById(posterButtonIDs.splice(posterCorrectButton - 1 ,1)).value = posterMovieNames[posterNewSrc]; // sets value of correct button and removes it from the array
 
@@ -61,10 +63,10 @@ function posterUpdateButtons(){
     }
     document.getElementById(posterButtonIDs[1]).value = posterFalseButtonTxt1;
     document.getElementById(posterButtonIDs[0]).value = posterFalseButtonTxt2;
-    posterButtonIDs = ["posterOne","posterTwo","posterThree"];
+    posterButtonIDs = ["posterOne","posterTwo","posterThree"];//resets the array
 }
 
-function posterUpdateTextBoxValues(){
+function posterUpdateTextBoxValues(){//updates the text boxes
     
     document.getElementById("posterAttemptDisplay").innerHTML = "attempt : " + ++posterAttemptCount; 
     
