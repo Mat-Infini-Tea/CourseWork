@@ -1,5 +1,5 @@
 <!doctype html>
-
+<!-- Kaveh Nejad 1905933 -->
 <html lang="en">
 
 <head>
@@ -11,8 +11,6 @@
 
 
   <link rel="stylesheet" type="text/css" href="style.css">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -21,45 +19,24 @@
         .column{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 100px 300px;
-    grid-gap: 10px;
-    padding: 10px;
+    grid-template-rows: 23% 80%;
+    grid-gap: 5%;
+    padding: 2%;
 }
-#Weekly{
-    background-image: url("Images/Metting_Times_Background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 140%;
-}
-#Weekly, #Special{
+
+  #Weekly, #Special{
+    margin-left: 5%;
     border-style: solid;
     height: 500%;
+    width: 100%;
     background-color: #00ffaa;
-    margin-bottom:10% ;
     
   }
   
-  #WeeklyH2{
+H2{
     text-align: center; 
     text-decoration: underline;
   }
-  
-  #monday, #friday{
-    margin-left: 3%;
-  }
-  #TimeActivity{
-    float: right;
-  }
-  
-  #Special{
-    width: 50%;
-    margin-left: 30% ;
-}
-#Weekly p{
-    color:rgb(36, 1, 1);
-    margin: 1%;
-    font-size: 20px;
-}
 
 </style>
   <ul>
@@ -68,7 +45,7 @@
         <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
         <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
   </ul>
-  <ul class="sul">
+  <ul class="sul" style="margin-top: 3.95%;">
     <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/rules.html">Rules</a></li>
     <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/contact.html">Contact</a></li>
     <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/Events.html">Events</a></li>
@@ -83,35 +60,110 @@
       
       <div class="column">
 
-          <div id="Weekly" style = "color: black; font-size: 20px; margin-right: 10%;">
-                  <h2 style="margin-top: 0px;" id="WeeklyH2">Weekly</h2>
-                  <p style="margin-top: 25%;">Monday:</p>
-                  <div id="monday">
-                      <div>
-                          <p style="word-spacing: 40px;">Time Activity</p> 
-                      </div>
-                      <P style="word-spacing: 33px;">18:00 Fan-Theories</P>      
-                  </div>
-                  
-                  <p style="margin-top: 30px;">Friday:</p>
-                  <div id="friday" >
-                      <div>
-                          <p style="word-spacing: 40px;">Time Activity</p> 
-                      </div>
-                      <P style="word-spacing: 33px;">19:00 Art-Night</P>      
-                  </div>
-                  
-                  <p style="margin-top: 30px;">Saturday:</p>
-                  <div id="saturday" >
-                      <div>
-                          <p style="word-spacing: 40px;">Time Activity</p> 
-                      </div>
-                      <P style="word-spacing: 33px;">18:00 Mini_Movie_Binge</P>      
-                  </div>
-              </div>
+          <div id="Weekly" style = "color: black; font-size: 20px;"> <!-- Weekly calender with times and days-->
+                  <h2 style="margin-top: 0px;">Weekly</h2>
+                  <!-- Table with weekly events-->
+                      <table border = "1"> <!-- create table-->
+                        <tr> <!-- create headers-->
+                          <th>Times</th>
+                          <th>Monday</th>
+                          <th>Wensday</th>
+                          <th>Saturday</th>
+                          <th>Sunday</th>
+                        </tr>
+                        
+                        <tr> <!-- first column is always time, then the coresponding days-->
+                          <td>14:00</td>
+                          <td rowspan="3">Fan Art</td> <!-- rowspan is to state how many rows it will take up-->
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td>15:00</td>
+                          <td rowspan="2">Fan Theory</td>
+                          <td rowspan="3"> TV-Show <br> binge </td><!-- rowspan is to state how many rows it will take up-->
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                          <td>16:00</td>
+                          <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>17:00</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+
+                          <tr>
+                              <td>18:00</td>
+                              <td></td>
+                              <td>Weekly <br>TV-Show</td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+
+                            <tr>
+                              <td>19:00</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>Marathon Review</td>
+                            </tr>
+
+                            <tr>
+                                <td>20:00</td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="6">Movie <br> Marathon</td> <!-- rowspan is to state how many rows it will take up-->
+                                <td>Random Talks</td>
+                            </tr>
+
+                            <tr>
+                                <td>21:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+  
+                              <tr>
+                                <td>22:00</td>
+                                <td></td>
+                                <td></td>
+                                <td rowspan="2">TV-Show <br> Catch-up</td> <!-- this is simple does it really need a comment to explain-->
+                              </tr>
+  
+                              <tr> <!-- these aren't empty, they have info in them coz of rowspan above-->
+                                  <td>23:00</td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+
+                              <tr>
+                                  <td>24:00</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+    
+                                <tr>
+                                  <td>01:00</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+
+
+                      </table>
+          </div>
+              
           
-          <div id="Special" style = "color: black; font-size: 20px; float: right;">
-                  <h2 style="margin-top: 0px;" id="WeeklyH2">Special Event</h2>
+          <div id="Special" style = "color: black; font-size: 20px; float: right;"> <!-- special activities in new collumn next to the Weekly calender-->
+                  <h2 style="margin-top: 0px;">Special Event</h2>
                   <p style="margin-bottom: 0%;">On sunday the 18th of november there will be a 12 hour marathon of our favorite 
                       Nicolas Cage movies.</pS> 
                   <p style="margin-top: 0%;">More information will be in your email.</p>
@@ -123,19 +175,8 @@
       </div>
   </div>
 </div>
-  <!--Footer: holds a copyright statement, social media buttons for facebook, twitter, youtube, tumblr, reddit and instagram. Also has Site Map for accesibility and usibility-->
-  <div class="footer">
-    <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ® <br>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-youtube"></a>
-      <a href="#" class="fa fa-tumblr"></a>
-      <a href="#" class="fa fa-reddit"></a>
-      <a href="#" class="fa fa-instagram"></a>
-
-    <a style ="float: right; font-size: 20px; text-decoration: none; color: white;" href = "https://mat-infini-tea.github.io/CourseWork/siteMap.png">Site Map</a>
-
-    </p>
+  <div class="footer"> <!-- footer stuck to the bottom of the page -->
+    <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
   </div>
 </body>
 
