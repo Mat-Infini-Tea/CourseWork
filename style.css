@@ -1,3 +1,6 @@
+/*Style sheet for the Nicholas Cage Society website Matthew Hutcheson 1812425*/
+
+/*Sets the background of the body as a gif of nicholas cage and sets the font for all pages*/
 body{
           background-image: url("nic.gif");
           background-attachment: fixed;
@@ -6,11 +9,9 @@ body{
           background-repeat: no-repeat;
           background-size: cover;
           font-family: Futura, Trebuchet MS, Arial, sans-serif;
-          
-          background-width: 100%;
            
 }
-      
+/*Sets the style for the nav bar, makes it cover the full width and sets padding for the induvidual items on the bar*/      
 ul {
         list-style-type: none;
         margin: 0;
@@ -42,10 +43,7 @@ li a:hover {
         
 }
 
-h1{
-        
-}
-
+/*Sets the style for the secondary navigation bars positions them at the left hand side of the screen near the top and uses similar theme to the primary navigation*/
 .sul {
   list-style-type: none;
   margin: 0;
@@ -62,6 +60,7 @@ h1{
   text-decoration: none;
 }
 
+/*Sets the style for the footer puts it at the bottom of the page and sets the colours for the background and text*/
 .footer{
         background-color: black;
         color: white;
@@ -74,31 +73,26 @@ h1{
         background-size: cover;
 }   
 
+/*Sets the style for the tier buttons on the membership area page*/
 .btn-group button {
-        background-color: black; /* Green background */
-        border: 0px solid green; /* Green border */
-        color: white; /* White text */
-        padding: 30px 24px; /* Some padding */
-        cursor: pointer; /* Pointer/hand icon */
-        width: 80%; /* Set a width if needed */
-        display: block; /* Make the buttons appear below each other */
+        background-color: black; 
+        color: white;
+        padding: 30px 24px;
+        cursor: pointer; 
+        width: 80%;
+        display: block; 
         margin-right: 10%; 
         margin-left: 10%;
         font-weight: bold;
         font-size: 50px;
         font-family: Brush Script MT, cursive;
       }
-      
+      */
 .btn-group button:not(:last-child) {
-        border-bottom: none; /* Prevent double borders */
-}
-      
-      /* Add a background color on hover */
-.btn-group button:hover {
-        background-color: #3e8e41;
-
+        border-bottom: none;
 }
 
+/*Sets the style for the social media buttons on the footer*/
 .fa {
         padding: 20px;
         font-size: 50px;
