@@ -1,49 +1,105 @@
+<!-- Euan Chree 1912490 The Gallery Page -->
 <!doctype html>
-
 <html lang="en">
-<head>
-  
+  <head>
+    <!-- Setting up the tabs title and linking to external files-->
+    <title>Gallery</title>
+    <link rel="shortcut icon" href="ncsl1.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-  <title>Gallery</title>
-  
-  <link rel="shortcut icon" href="ncsl1.png" />
-<link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The css for the page (seperate from the style.css that every page gets) -->
+    <style>
 
-  
+        /* Css code for the image row */
+        .smallImageRow {
+          float: right;
+        padding: 10px;
+        display: table;
+      }
+      
+      /* Css code for the image columns */
+      .smallImageColumn {
+        float: right;
+        padding: 10px;
+      }
 
-</head>
+      /* Css code for the img elements in the image columns */
+      .smallImageColumn img {
+        width: 150px;
+        height: 80px;
+        border-style: solid;
+        margin-right: 20px;
+        border-radius: 10px;
+      }
 
-<body>
+      /* Css code for the img elements in teh image container */
+      .imageContainer img {
+        width: 900px;
+        height: 480px;
+        margin-top: 20px;
+        margin-left: 24%;
+        border-radius: 20px;
+      }
+
+    </style>
+      
+    <!-- The javascript code for the page -->
+    <script>
+      //Creating a function that will make the image that is clicked enlarged for easier viewing
+      function makeImageBig(img) { //Declaring the function and passing it img
+        var containerImg = document.getElementById("bigImage"); //Sets the containerImg variable to "getElementById" of the given parameter img
+        containerImg.alt = img.alt; //Setting the container img alt to the alt of the small image its enlarged from
+        containerImg.src = img.src; //Setting the container img elements src to the src of the passed image (making the smaller image get reproduced but bigger)
+        console.log(containerImg.alt);
+      }  
+    </script>
+    
+  </head>
+
+  <body>
+    <!--Primary navigation bar holds the logo which links to the home page and the 3 main pages of the site at the right hand side.-->
     <ul>
-        <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
-        <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
+      <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
+      <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
+      <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Bio.html">Biography</a></li>
+      <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
     </ul> 
-  <ul class="sul">
-    <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/fan.html">Fan Art</a></li>
-  </ul>
-  
-    <div style="float: middle; font-size: 9px; color: white; padding: 50% 0% 0% 0%; margin-right: 10%; margin-left: 10%; margin-top: 10%; background-color: white; word-wrap: break-word;">
-        <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Gallery</h2>
 
-        <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">The Gallery Text will go here.
-      </p>
+    <!--Secondary navigation for the membership area pages-->
+    <ul class="sul" style="margin-top: 3.95%;">
+      <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/fan.html">Fan Art</a></li>
+    </ul>
+    
+    <!--A div that creates the effect of a white sheet of paper on the gif background for easy readability of content-->
+    <div style="float: middle; font-size: 9px; color: white; padding: 50% 0% 0% 0%; margin-right: 10%; margin-left: 10%; margin-top: 10%; background-color: white;word-wrap: break-word;">
+      <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Gallery</h2>
+      <p style="font-size: 20px; color: black; margin-right: 10%; margin-left: 10%">Welcome to the gallery where we show off pcitures of the glorious nicolas cage. Click on the image to expand the view</p>
+      
+      <!-- Html code for the row of smaller images -->
+      <div class="smallImageRow">
+
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage1.jpg" alt="An image of nicolas cage"></div>
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage2.jpg" alt="An image of nicolas cage"></div>
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage3.jpg" alt="An image of nicolas cage"></div>
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage4.jpg" alt="An image of nicolas cage"></div>
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage5.jpg" alt="An image of nicolas cage"></div>
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage6.jpg" alt="An image of nicolas cage"></div>
+        <div class="smallImageColumn"><img onclick="makeImageBig(this)" src="GalImages/nicImage7.jpg" alt="An image of nicolas cage"></div>
+    
+      </div>
+
+      <!-- Html code for the image container that holds -->
+      <div class="imageContainer">
+          <img id="bigImage" src="bigImageSrc" alt="bigImageAlt">
+      </div>
+
     </div>    
-   <!--Footer: holds a copyright statement, social media buttons for facebook, twitter, youtube, tumblr, reddit and instagram. Also has Site Map for accesibility and usibility-->
-  <div class="footer">
-    <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ® <br>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-youtube"></a>
-      <a href="#" class="fa fa-tumblr"></a>
-      <a href="#" class="fa fa-reddit"></a>
-      <a href="#" class="fa fa-instagram"></a>
 
-    <a style ="float: right; font-size: 20px; text-decoration: none; color: white;" href = "https://mat-infini-tea.github.io/CourseWork/siteMap.png">Site Map</a>
+    <!-- Html code for the footer-->
+    <div class="footer">
+      <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
+    </div>
+    
+  </body>
 
-    </p>
-  </div>
-</body>
 </html>

@@ -1,12 +1,11 @@
+<!-- Euan Chree 1912490 The Contact us Page -->
 <!doctype html>
-<!-- Page by euan chree of the Nicholas Cage Society-->
 <html lang="en">
   <head>
     <!-- Setting up the tabs title and linking to external files-->
     <title>Contact</title>
     <link rel="shortcut icon" href="ncsl1.png" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- The css for the page (seperate from the style.css that every page gets) -->
     <style>
@@ -24,6 +23,7 @@
         color: black;
         font-size: 20px;
         margin: 10px;
+        margin-left: 20px;
       }
     </style>
 
@@ -31,17 +31,20 @@
     <script>
       //Creating a function that updates the status box element
       function collectInfo(statusBox) { //Passing the function the statusBox id
+        var firstName = document.getElementById("firstNameInput").value; //Sets a varibale firstName to the data inputeed to the form
+        var lastName = document.getElementById("lastNameInput").value; //Sets a varibale lastName to the data inputeed to the form
         var email = document.getElementById("emailInput").value; //Sets a variable email to the data inputted to the form
         var question = document.getElementById("questionInput").value; //Sets a variable question to the data inputted to the form
         var statusBox = document.getElementById(statusBox); //Sets the statusBox variable to "getElementById" and is given statusBox (the variable that was passed to the function)
-        statusBox.innerHTML = "Status: question has been submitted. Thank you "+email+" for asking "+question+"."; //Changes the inner html of the status box, it tells the user wether a question has been uploaded. It also displays the email that was inputted and what they asked
+        var statusBoxOutput = ("Status: question has been submitted." + "\n" + "Thanks "+firstName+" "+lastName+" for your question."); //Creates the variable statusBoxOuput and makes it a string thanking the user for asking a question and displays their first and last name
+        statusBox.innerHTML =  statusBoxOutput;//Changes the inner html of the status box setting it to the status box variable 
         statusBox.style.backgroundColor="LightGreen"; //Changes the background colour of the stausBox to easily show a upload
       };
     </script>
   </head>
   
   <body>
-    <!-- Html code for the horizontal nav bar-->
+    <!--Primary navigation bar holds the logo which links to the home page and the 3 main pages of the site at the right hand side.-->
     <ul>
       <a href="https://mat-infini-tea.github.io/CourseWork/"><img src="ncsl1.gif" height="70px" width="70px"></a>
       <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/MA.html">Member Area</a></li>
@@ -49,14 +52,14 @@
       <li style="float:right"><a href="https://mat-infini-tea.github.io/CourseWork/Gal.html">Gallery</a></li>
     </ul>
 
-    <!-- Html code for the vertical nav bar-->
+    <!--Secondary navigation for the membership area pages-->
     <ul class="sul" style="margin-top: 3.95%;">
       <li class = "lia"><a href="https://mat-infini-tea.github.io/CourseWork/rules.html">Rules</a></li>
       <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/contact.html">Contact</a></li>
       <li class="lia"><a href="https://mat-infini-tea.github.io/CourseWork/Events.html">Events</a></li>
     </ul>
 
-    <!-- Html code for the white box that the pages info is displayed uppon -->
+    <!--A div that creates the effect of a white sheet of paper on the gif background for easy readability of content-->
     <div style="float: middle; font-size: 9px; color: white; padding: 50% 0% 0% 0%; margin-right: 10%; margin-left: 10%; margin-top: 10%; background-color: white; word-wrap: break-word;">
       
       <!-- Displaying some text that guide the user to inputting a question if they need to -->
@@ -67,6 +70,14 @@
       <!-- Html code for the form inputs on the page-->
       <div class="contactForm">
         <form>
+
+          <!-- The first name input -->
+          <p>First Name<br></p>
+          <input type="text" id="firstNameInput" required>
+
+          <!-- The last name input -->
+          <p>Last Name<br></p>
+          <input type="text" id="lastNameInput" required>
 
           <!-- The email input -->
           <p>Email Address<br></p>
@@ -88,19 +99,8 @@
     </div>
 
     <!-- Html code for the footer-->
-    <!--Footer: holds a copyright statement, social media buttons for facebook, twitter, youtube, tumblr, reddit and instagram. Also has Site Map for accesibility and usibility-->
-  <div class="footer">
-    <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ® <br>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-youtube"></a>
-      <a href="#" class="fa fa-tumblr"></a>
-      <a href="#" class="fa fa-reddit"></a>
-      <a href="#" class="fa fa-instagram"></a>
-
-    <a style ="float: right; font-size: 20px; text-decoration: none; color: white;" href = "https://mat-infini-tea.github.io/CourseWork/siteMap.png">Site Map</a>
-
-    </p>
-  </div>
+    <div class="footer">
+      <p style="font-size: 20px; margin-right: 10%; margin-left: 10% ">Robert Gordon University Society™ of™ Nicholas™ Cage™ © ®</p>
+    </div>
   </body>
 </html>
