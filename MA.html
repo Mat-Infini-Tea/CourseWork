@@ -87,6 +87,66 @@ label {
   }
 }
 
+
+ /* Three columns side by side */
+ .column {
+  float: left;
+  width: %;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  font-size: 35px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+} 
+h2{
+  font-size: 40px;
+  color: black;
+}
+p{
+  color: black;
+  font-size: 15px;
+  font-style: italic;
+
+
+}
+
+
   </style>
 
 </head>
@@ -110,8 +170,79 @@ label {
       <h2 style="font-size: 60px; color: black; margin-top: -60%; margin-right: 10%; margin-left: 10%">Membership Area
       </h2>
 
+      <h2 style="font-size: 45px; color: black; margin-right: 10%; margin-left: 10%; text-decoration: wavy;">Current Members:
+        </h2>
+
       <p style="color: black; font-size: 20px; margin-right: 10%; margin-left: 10% ">
       </p>
+      
+      <div class="row"  >
+          <div class="column">
+            <div class="card" style="width:65%">
+              <img src="https://images-na.ssl-images-amazon.com/images/I/519hH1hhQ5L._AC_.jpg" alt="Matthew" style="width:100%;">
+              <div class="container">
+                <h2>Matthew Hutcheson</h2>
+                <p class="title">CEO &amp; Founder</p>
+                <p>The Man who started it all.</p>
+                <p>bestguy@ncs.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card" style="width:100%; margin-left: -30%;">
+              <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/actor-evan-peters-of-the-film-adult-world-attends-the-news-photo-1571947317.jpg?crop=1.00xw:0.668xh;0,0.0216xh&resize=200:*" alt="Kester" style="width:100%">
+              <div class="container">
+                <h2>Kester Moore</h2>
+                <p class="title">The Jester</p>
+                <p>"Have you met my good friend Joe?"</p>
+                <p>Kestermoore@ncs.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="card" style="width:60%">
+              <img src="https://i.pinimg.com/originals/82/c2/e7/82c2e71dbd617ef11604a6a0ee7bdba4.jpg" alt="Kaveh" style="width:100%">
+              <div class="container">
+                <h2>Kaveh Nejad</h2>
+                <p class="title">Co Founder</p>
+                <p>In affair with Jester.</p>
+                <p>colinfarrell@ncs.com</p>
+                <p><button class="button">Contact</button></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+              <div class="card" style="width:50%">
+                <img src="http://images4.fanpop.com/image/photos/24100000/Dominic-Monaghan-dominic-monaghan-24115697-500-644.jpg" alt="Euan" style="width:100%">
+                <div class="container">
+                  <h2>Euan Chree</h2>
+                  <p class="title">Co Founder</p>
+                  <p>Soon to be fired by CEO.</p>
+                  <p>euanowenchree@ncs.com</p>
+                  <p><button class="button">Contact</button></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+                <div class="card" style="width:80%; margin-left: -40%;">
+                  <img src="https://i.pinimg.com/originals/fe/1e/ff/fe1eff101a0bfc5ddd17a40649d32cc0.jpg" alt="Ryan" style="width:100%">
+                  <div class="container">
+                    <h2>Ryan Stevenson</h2>
+                    <p class="title">Co Founder</p>
+                    <p>"I'm a what?"</p>
+                    <p>harrypotter@ncs.com</p>
+                    <p><button class="button">Contact</button></p>
+                  </div>
+                </div>
+              </div>
+        </div> 
+
 
       <h3 style="font-size: 50px; color: black; margin-top: 5%; margin-right: 10%; margin-left: 10%; text-align: center; font-family: Brush Script MT, cursive; font-weight: bold;">
         Membership Tiers (Click on tier to see details)
